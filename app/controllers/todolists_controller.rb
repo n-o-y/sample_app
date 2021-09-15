@@ -32,6 +32,13 @@ class TodolistsController < ApplicationController
 
   end
 
+  def destroy
+    list = List.find(params[:id])
+    list.destroy
+    redirect_to todolists_path
+
+  end
+
   #privateは境界線
   private
 
